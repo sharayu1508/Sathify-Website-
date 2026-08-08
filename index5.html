@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sathify - Instant Home Services in Minutes</title>
-  <link rel="stylesheet" href="style4.css">
+  <link rel="stylesheet" href="style5.css">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -56,7 +56,7 @@
           </div>
         </div>
 
-        <a href="#about">About</a>
+        <a href="about.html">About</a>
         <a href="#reviews">Reviews</a>
         <a href="#faq">FAQ</a>
       </nav>
@@ -97,7 +97,16 @@
             <i class="fa-solid fa-star"></i> 4.8 Rated
           </div>
           
-          <img src="maid.png" alt="Sathify Expert">
+          <img src="maid1.png" alt="Sathify Expert" style="
+            width: 100% !important;
+            height: 500px !important;
+            max-width: 100% !important;
+            object-fit: contain !important;
+            object-position: center center !important;
+            display: block !important;
+            margin: 25px auto 0 auto !important;
+
+        ">
           
           <div class="eta-card">
             <div class="eta-icon">
@@ -268,7 +277,7 @@
       </div>
     </div>
 
-    <div class="reviews-slider">
+    <div class="reviews-slider" id="reviewsSlider">
       <div class="review-card">
         <div class="card-stars">
           <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
@@ -493,5 +502,82 @@
     </div>
   </footer>
 
+
+  <script>
+    const reviewSlider = document.querySelector('.reviews-slider');
+
+    if (reviewSlider) {
+      const reviewCards = Array.from(reviewSlider.children);
+
+      reviewCards.forEach(function(card) {
+        reviewSlider.appendChild(card.cloneNode(true));
+      });
+
+      let reviewSpeed = 0.5;
+      let reviewPaused = false;
+
+      reviewSlider.addEventListener('mouseenter', function() {
+        reviewPaused = true;
+      });
+
+      reviewSlider.addEventListener('mouseleave', function() {
+        reviewPaused = false;
+      });
+
+      function autoScrollReviews() {
+        if (!reviewPaused) {
+          reviewSlider.scrollLeft += reviewSpeed;
+
+          if (reviewSlider.scrollLeft >= reviewSlider.scrollWidth / 2) {
+            reviewSlider.scrollLeft = 0;
+          }
+        }
+
+        requestAnimationFrame(autoScrollReviews);
+      }
+
+      requestAnimationFrame(autoScrollReviews);
+    }
+  </script>
+
+
+  <script>
+    const reviewsSlider = document.getElementById("reviewsSlider");
+
+    if (reviewsSlider) {
+      const reviewCards = Array.from(reviewsSlider.children);
+
+      reviewCards.forEach(function(card) {
+        reviewsSlider.appendChild(card.cloneNode(true));
+      });
+
+      let reviewScrollSpeed = 0.7;
+      let reviewPaused = false;
+
+      function autoScrollReviews() {
+        if (!reviewPaused) {
+          reviewsSlider.scrollLeft += reviewScrollSpeed;
+
+          const originalWidth = reviewsSlider.scrollWidth / 2;
+
+          if (reviewsSlider.scrollLeft >= originalWidth) {
+            reviewsSlider.scrollLeft -= originalWidth;
+          }
+        }
+
+        requestAnimationFrame(autoScrollReviews);
+      }
+
+      reviewsSlider.addEventListener("mouseenter", function() {
+        reviewPaused = true;
+      });
+
+      reviewsSlider.addEventListener("mouseleave", function() {
+        reviewPaused = false;
+      });
+
+      autoScrollReviews();
+    }
+  </script>
 </body>
 </html>
