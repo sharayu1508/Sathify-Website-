@@ -3229,3 +3229,1395 @@ body {
     }
 
 }
+
+/* =========================================================
+   SATHIFY ABOUT PAGE
+========================================================= */
+
+.about-navbar {
+    width: 100%;
+    min-height: 80px;
+    background: #006A4E;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 7%;
+
+    box-sizing: border-box;
+}
+
+.about-logo {
+    color: white;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.about-nav-links {
+    display: flex;
+    align-items: center;
+    gap: 38px;
+}
+
+.about-nav-links a {
+    color: white !important;
+    text-decoration: none !important;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.about-nav-links a:hover {
+    color: #d9f5e9 !important;
+}
+
+.about-nav-links .about-active {
+    color: white !important;
+}
+
+
+/* =========================================================
+   ABOUT HERO
+========================================================= */
+
+.about-hero {
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    padding: 100px 8%;
+
+    box-sizing: border-box;
+
+    background: #f7faf8;
+}
+
+.about-hero-left {
+    max-width: 700px;
+}
+
+.about-tag,
+.about-small-tag {
+    display: inline-flex;
+    align-items: center;
+
+    gap: 8px;
+
+    background: #e7f4ed;
+    color: #006A4E;
+
+    padding: 9px 16px;
+
+    border-radius: 30px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 20px;
+}
+
+.about-hero-left h1 {
+    font-size: 58px;
+    line-height: 1.1;
+
+    color: #17202a;
+
+    margin: 0 0 25px;
+}
+
+.about-hero-left h1 span {
+    display: block;
+    color: #16845f;
+}
+
+.about-hero-left p {
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #66716c;
+
+    max-width: 650px;
+}
+
+
+/* =========================================================
+   HERO CARD
+========================================================= */
+
+.about-hero-card {
+    background: white;
+
+    padding: 45px;
+
+    border-radius: 30px;
+
+    box-shadow: 0 15px 45px rgba(0, 80, 60, 0.12);
+
+    border: 1px solid #e6eee9;
+}
+
+.about-card-icon {
+    width: 70px;
+    height: 70px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #e7f4ed;
+
+    color: #006A4E;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+.about-hero-card h2 {
+    color: #17202a;
+
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    margin: 0 0 18px;
+}
+
+.about-hero-card p {
+    color: #69756f;
+
+    line-height: 1.7;
+
+    font-size: 16px;
+}
+
+
+/* =========================================================
+   SECTION TITLES
+========================================================= */
+
+.about-section-title {
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 60px;
+}
+
+.about-section-title h2 {
+    font-size: 42px;
+
+    color: #17202a;
+
+    margin: 0 0 18px;
+}
+
+.about-section-title h2 span {
+    color: #16845f;
+}
+
+.about-section-title p {
+    color: #68736e;
+
+    line-height: 1.7;
+
+    font-size: 17px;
+}
+
+
+/* =========================================================
+   WHY SATHIFY
+========================================================= */
+
+.about-why {
+    padding: 100px 8%;
+
+    background: white;
+}
+
+.about-features {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 25px;
+
+    max-width: 1000px;
+
+    margin: auto;
+}
+
+.about-feature-card {
+    display: flex;
+
+    gap: 22px;
+
+    padding: 30px;
+
+    background: #f7faf8;
+
+    border-radius: 22px;
+
+    border: 1px solid #e8eee9;
+
+    transition: 0.3s;
+}
+
+.about-feature-card:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 12px 30px rgba(0, 90, 65, 0.1);
+}
+
+.about-feature-icon {
+    min-width: 58px;
+    height: 58px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #006A4E;
+
+    color: white;
+
+    border-radius: 16px;
+
+    font-size: 22px;
+}
+
+.about-feature-card h3 {
+    margin: 0 0 8px;
+
+    color: #17202a;
+
+    font-size: 20px;
+}
+
+.about-feature-card p {
+    margin: 0;
+
+    color: #707a75;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   HOW IT WORKS
+========================================================= */
+
+.about-how {
+    padding: 100px 8%;
+
+    background: #f7faf8;
+}
+
+.about-steps {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 25px;
+}
+
+.about-step {
+    position: relative;
+
+    background: white;
+
+    padding: 35px 25px;
+
+    border-radius: 22px;
+
+    text-align: center;
+
+    border: 1px solid #e7eee9;
+}
+
+.about-step-number {
+    position: absolute;
+
+    top: 15px;
+    right: 18px;
+
+    font-size: 13px;
+
+    font-weight: 700;
+
+    color: #b5c5be;
+}
+
+.about-step-icon {
+    width: 65px;
+    height: 65px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin: 10px auto 22px;
+
+    background: #e7f4ed;
+
+    color: #006A4E;
+
+    border-radius: 50%;
+
+    font-size: 23px;
+}
+
+.about-step h3 {
+    color: #17202a;
+
+    font-size: 19px;
+
+    margin-bottom: 12px;
+}
+
+.about-step p {
+    color: #707a75;
+
+    line-height: 1.6;
+
+    font-size: 14px;
+}
+
+
+/* =========================================================
+   MISSION
+========================================================= */
+
+.about-mission {
+    padding: 100px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1.2fr 0.8fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+    background: white;
+}
+
+.about-mission-content {
+    max-width: 700px;
+}
+
+.about-mission-content h2 {
+    font-size: 42px;
+
+    line-height: 1.2;
+
+    color: #17202a;
+
+    margin: 0 0 22px;
+}
+
+.about-mission-content h2 span {
+    color: #16845f;
+}
+
+.about-mission-content > p {
+    color: #68736e;
+
+    font-size: 17px;
+
+    line-height: 1.8;
+}
+
+.about-mission-points {
+    margin-top: 25px;
+}
+
+.about-mission-points div {
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 15px;
+
+    color: #42504a;
+
+    font-weight: 600;
+}
+
+.about-mission-points i {
+    width: 25px;
+    height: 25px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #006A4E;
+
+    color: white;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+}
+
+.about-mission-card {
+    background: #006A4E;
+
+    color: white;
+
+    padding: 55px 40px;
+
+    border-radius: 30px;
+
+    text-align: center;
+
+    box-shadow: 0 18px 40px rgba(0, 106, 78, 0.2);
+}
+
+.about-mission-card > i {
+    font-size: 50px;
+
+    margin-bottom: 25px;
+
+    color: #dff5e9;
+}
+
+.about-mission-card h3 {
+    font-size: 30px;
+
+    line-height: 1.3;
+
+    margin-bottom: 15px;
+}
+
+.about-mission-card p {
+    color: #d9eee5;
+}
+
+
+/* =========================================================
+   CTA
+========================================================= */
+
+.about-cta {
+    padding: 90px 8%;
+
+    text-align: center;
+
+    background: linear-gradient(
+        135deg,
+        #006A4E,
+        #16845f
+    );
+
+    color: white;
+}
+
+.about-cta h2 {
+    font-size: 42px;
+
+    margin: 0 0 18px;
+}
+
+.about-cta p {
+    max-width: 650px;
+
+    margin: 0 auto 30px;
+
+    line-height: 1.7;
+
+    color: #e5f5ed;
+
+    font-size: 17px;
+}
+
+.about-cta-button {
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    padding: 15px 28px;
+
+    background: white;
+
+    color: #006A4E !important;
+
+    text-decoration: none !important;
+
+    border-radius: 30px;
+
+    font-weight: 700;
+
+    transition: 0.3s;
+}
+
+.about-cta-button:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .about-navbar {
+        padding: 20px 5%;
+
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .about-nav-links {
+        gap: 20px;
+
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .about-hero {
+        grid-template-columns: 1fr;
+
+        padding: 70px 6%;
+
+        gap: 40px;
+    }
+
+    .about-hero-left h1 {
+        font-size: 45px;
+    }
+
+    .about-features {
+        grid-template-columns: 1fr;
+    }
+
+    .about-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-mission {
+        grid-template-columns: 1fr;
+
+        padding: 70px 6%;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    .about-logo {
+        font-size: 28px;
+    }
+
+    .about-nav-links {
+        gap: 14px;
+    }
+
+    .about-nav-links a {
+        font-size: 14px;
+    }
+
+    .about-hero {
+        padding: 55px 5%;
+    }
+
+    .about-hero-left h1 {
+        font-size: 38px;
+    }
+
+    .about-hero-left p {
+        font-size: 16px;
+    }
+
+    .about-hero-card {
+        padding: 30px;
+    }
+
+    .about-section-title h2 {
+        font-size: 32px;
+    }
+
+    .about-feature-card {
+        padding: 22px;
+    }
+
+    .about-steps {
+        grid-template-columns: 1fr;
+    }
+
+    .about-mission-content h2 {
+        font-size: 32px;
+    }
+
+    .about-cta h2 {
+        font-size: 32px;
+    }
+
+}
+/* ===== PREMIUM SATHIFY GREEN BACKGROUND ===== */
+
+.about-hero {
+    background: linear-gradient(
+        135deg,
+        #e6f3ed,
+        #cfe8dc,
+        #b9ddcc
+    ) !important;
+}
+
+.about-how {
+    background: linear-gradient(
+        135deg,
+        #d5ebdf,
+        #c1dfd0,
+        #e5f3ec
+    ) !important;
+}
+
+.about-cta {
+    background: linear-gradient(
+        135deg,
+        #07563f,
+        #087052,
+        #15845e
+    ) !important;
+}
+
+/* =========================================================
+   SATHIFY - DYNAMIC WEBSITE ENHANCEMENT
+   Paste this at the VERY BOTTOM of style5.css
+========================================================= */
+
+
+/* =========================================================
+   SMOOTH WEBSITE
+========================================================= */
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+
+/* =========================================================
+   NAVBAR DYNAMIC EFFECT
+========================================================= */
+
+.navbar {
+    transition: all 0.3s ease;
+}
+
+.navbar a {
+    transition: all 0.3s ease !important;
+    position: relative;
+}
+
+.navbar a::after {
+    content: "";
+    position: absolute;
+
+    left: 50%;
+    bottom: -7px;
+
+    width: 0;
+    height: 2px;
+
+    background: #ffffff;
+
+    transform: translateX(-50%);
+
+    transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+    width: 70%;
+}
+
+.navbar a:hover {
+    transform: translateY(-2px);
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+button,
+.btn,
+.cta-button,
+.explore-btn,
+.about-cta-button {
+    transition: all 0.3s ease !important;
+}
+
+button:hover,
+.btn:hover,
+.cta-button:hover,
+.explore-btn:hover,
+.about-cta-button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 25px rgba(0, 106, 78, 0.22);
+}
+
+button:active,
+.btn:active,
+.cta-button:active,
+.explore-btn:active,
+.about-cta-button:active {
+    transform: translateY(0);
+}
+
+
+/* =========================================================
+   GENERAL SECTION ANIMATION
+========================================================= */
+
+section {
+    position: relative;
+}
+
+
+/* =========================================================
+   HERO DYNAMIC BACKGROUND
+========================================================= */
+
+.hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 450px;
+    height: 450px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 106, 78, 0.08);
+
+    top: -180px;
+    right: -120px;
+
+    animation: floatingCircle 7s ease-in-out infinite;
+}
+
+.hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 280px;
+    height: 280px;
+
+    border-radius: 50%;
+
+    background: rgba(22, 132, 95, 0.06);
+
+    bottom: -120px;
+    left: -100px;
+
+    animation: floatingCircle 9s ease-in-out infinite reverse;
+}
+
+@keyframes floatingCircle {
+
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(25px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero h1 {
+    animation: heroText 0.9s ease forwards;
+}
+
+.hero p {
+    animation: heroText 1.1s ease forwards;
+}
+
+@keyframes heroText {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================================
+   HERO IMAGE
+========================================================= */
+
+.hero img {
+    transition: transform 0.6s ease;
+}
+
+.hero img:hover {
+    transform: scale(1.035);
+}
+
+
+/* =========================================================
+   IMAGE CARDS
+========================================================= */
+
+.image-card img,
+.service-image img,
+.card img {
+    transition: transform 0.5s ease;
+}
+
+.image-card:hover img,
+.service-image:hover img,
+.card:hover img {
+    transform: scale(1.06);
+}
+
+
+/* =========================================================
+   SERVICE CARDS
+========================================================= */
+
+.service-card,
+.services-card,
+.service-box {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease,
+        border-color 0.35s ease;
+}
+
+.service-card:hover,
+.services-card:hover,
+.service-box:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 106, 78, 0.14);
+}
+
+
+/* =========================================================
+   CARD ICON ANIMATION
+========================================================= */
+
+.service-card i,
+.services-card i,
+.service-box i {
+    transition: transform 0.35s ease;
+}
+
+.service-card:hover i,
+.services-card:hover i,
+.service-box:hover i {
+    transform: scale(1.15) rotate(-5deg);
+}
+
+
+/* =========================================================
+   CITIES SECTION
+========================================================= */
+
+.city-card,
+.cities-card,
+.city-box {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.city-card:hover,
+.cities-card:hover,
+.city-box:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(0, 106, 78, 0.15);
+}
+
+
+/* =========================================================
+   REVIEW CARDS
+========================================================= */
+
+.review-card,
+.reviews-card,
+.testimonial-card {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.review-card:hover,
+.reviews-card:hover,
+.testimonial-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 18px 38px rgba(0, 106, 78, 0.14);
+}
+
+
+/* =========================================================
+   STAR EFFECT
+========================================================= */
+
+.review-card .stars,
+.reviews-card .stars,
+.testimonial-card .stars {
+    transition: transform 0.3s ease;
+}
+
+.review-card:hover .stars,
+.reviews-card:hover .stars,
+.testimonial-card:hover .stars {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   FAQ
+========================================================= */
+
+.faq-item,
+.faq-card,
+.question-card {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.faq-item:hover,
+.faq-card:hover,
+.question-card:hover {
+    transform: translateX(5px);
+
+    box-shadow:
+        0 10px 25px rgba(0, 106, 78, 0.10);
+}
+
+
+/* =========================================================
+   ABOUT PAGE - HERO
+========================================================= */
+
+.about-hero {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-hero::before {
+    content: "";
+
+    position: absolute;
+
+    width: 400px;
+    height: 400px;
+
+    border-radius: 50%;
+
+    background: rgba(0, 106, 78, 0.07);
+
+    top: -180px;
+    left: -150px;
+
+    animation: aboutFloat 8s ease-in-out infinite;
+}
+
+.about-hero::after {
+    content: "";
+
+    position: absolute;
+
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+
+    background: rgba(22, 132, 95, 0.06);
+
+    right: -120px;
+    bottom: -150px;
+
+    animation: aboutFloat 10s ease-in-out infinite reverse;
+}
+
+@keyframes aboutFloat {
+
+    0% {
+        transform: translate(0, 0);
+    }
+
+    50% {
+        transform: translate(20px, -20px);
+    }
+
+    100% {
+        transform: translate(0, 0);
+    }
+
+}
+
+
+/* =========================================================
+   ABOUT HERO CARD
+========================================================= */
+
+.about-hero-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.about-hero-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 55px rgba(0, 106, 78, 0.18);
+}
+
+
+/* =========================================================
+   ABOUT FEATURE CARDS
+========================================================= */
+
+.about-feature-card {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-feature-card::before {
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+    height: 0;
+
+    left: 0;
+    top: 50%;
+
+    background: #006A4E;
+
+    transition:
+        height 0.35s ease,
+        top 0.35s ease;
+}
+
+.about-feature-card:hover::before {
+    height: 70%;
+    top: 15%;
+}
+
+
+/* =========================================================
+   ABOUT FEATURE ICON
+========================================================= */
+
+.about-feature-icon {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.about-feature-card:hover .about-feature-icon {
+    transform: rotate(-6deg) scale(1.08);
+
+    box-shadow:
+        0 8px 18px rgba(0, 106, 78, 0.25);
+}
+
+
+/* =========================================================
+   ABOUT STEP CARDS
+========================================================= */
+
+.about-step {
+    transition:
+        transform 0.35s ease,
+        box-shadow 0.35s ease;
+}
+
+.about-step:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 18px 38px rgba(0, 106, 78, 0.13);
+}
+
+.about-step-icon {
+    transition:
+        transform 0.35s ease,
+        background 0.35s ease;
+}
+
+.about-step:hover .about-step-icon {
+    transform: scale(1.12);
+
+    background: #006A4E;
+
+    color: white;
+}
+
+
+/* =========================================================
+   MISSION CARD
+========================================================= */
+
+.about-mission-card {
+    transition:
+        transform 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.about-mission-card:hover {
+    transform: translateY(-10px);
+
+    box-shadow:
+        0 25px 50px rgba(0, 106, 78, 0.25);
+}
+
+
+/* =========================================================
+   CTA ANIMATED GRADIENT
+========================================================= */
+
+.about-cta {
+    background:
+        linear-gradient(
+            120deg,
+            #07563f,
+            #087052,
+            #16845f,
+            #087052
+        ) !important;
+
+    background-size: 300% 300% !important;
+
+    animation: greenGradient 8s ease infinite;
+}
+
+@keyframes greenGradient {
+
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+
+}
+
+
+/* =========================================================
+   CTA BUTTON
+========================================================= */
+
+.about-cta-button {
+    position: relative;
+
+    overflow: hidden;
+}
+
+.about-cta-button::before {
+    content: "";
+
+    position: absolute;
+
+    width: 0;
+    height: 100%;
+
+    left: 0;
+    top: 0;
+
+    background: #dff5e9;
+
+    transition: width 0.35s ease;
+
+    z-index: 0;
+}
+
+.about-cta-button:hover::before {
+    width: 100%;
+}
+
+.about-cta-button i,
+.about-cta-button {
+    position: relative;
+}
+
+
+/* =========================================================
+   LOGO
+========================================================= */
+
+.logo,
+.about-logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover,
+.about-logo:hover {
+    transform: scale(1.04);
+}
+
+
+/* =========================================================
+   GENERAL GREEN GLOW
+========================================================= */
+
+.green-glow {
+    box-shadow:
+        0 0 0 rgba(0, 106, 78, 0);
+    transition: box-shadow 0.4s ease;
+}
+
+.green-glow:hover {
+    box-shadow:
+        0 15px 40px rgba(0, 106, 78, 0.18);
+}
+
+
+/* =========================================================
+   DOWNLOAD APP BUTTON
+========================================================= */
+
+.download-btn,
+.download-app,
+.app-download {
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.download-btn:hover,
+.download-app:hover,
+.app-download:hover {
+    transform: translateY(-4px) scale(1.02);
+
+    box-shadow:
+        0 12px 28px rgba(0, 106, 78, 0.25);
+}
+
+
+/* =========================================================
+   SCROLLBAR
+========================================================= */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #edf5f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #087052;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #07563f;
+}
+
+
+/* =========================================================
+   SELECTION
+========================================================= */
+
+::selection {
+    background: #087052;
+    color: white;
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+    .hero::before {
+        width: 250px;
+        height: 250px;
+    }
+
+    .hero::after {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-hero::before {
+        width: 250px;
+        height: 250px;
+    }
+
+    .about-hero::after {
+        width: 180px;
+        height: 180px;
+    }
+
+    .about-feature-card:hover {
+        transform: translateY(-5px);
+    }
+
+}
