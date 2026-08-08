@@ -6,13 +6,26 @@
   --primary-hover: #00523d;
   --primary-light: #e6f0ec;
   --primary-glow: rgba(0, 106, 78, 0.35);
+
   --bottle-green-dark: #003829;
   --accent-pink: #006A4E;
   --dark-accent: #1e293b;
+
   --text-main: #0f172a;
   --text-muted: #475569;
-  --bg-gradient: linear-gradient(135deg, #edf6f2 0%, #ffffff 50%, #e1efe9 100%);
+
+  /* Beautiful Sathify Background */
+  --bg-gradient: linear-gradient(
+    135deg,
+    #E8F6F0 0%,
+    #F7FCF9 25%,
+    #FFFFFF 50%,
+    #F0F9F5 75%,
+    #D9EEE5 100%
+  );
+
   --card-bg: #ffffff;
+
   --font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -182,7 +195,10 @@ body {
   display: block;
 }
 
-/* Buttons */
+/* =========================================================
+   BUTTONS
+========================================================= */
+
 .btn {
   border: none;
   border-radius: 30px;
@@ -192,23 +208,77 @@ body {
   align-items: center;
   justify-content: center;
   gap: 8px;
-  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.35s ease;
   font-family: inherit;
+  position: relative;
+  overflow: hidden;
 }
 
+
+/* Primary Button */
 .btn-primary {
-  background-color: var(--primary-color);
+  background: linear-gradient(
+    135deg,
+    #006A4E 0%,
+    #008F6A 100%
+  );
+
   color: #ffffff;
   padding: 0.85rem 1.8rem;
-  box-shadow: 0 10px 20px var(--primary-glow);
+
+  box-shadow:
+    0 8px 18px rgba(0, 106, 78, 0.25),
+    0 3px 8px rgba(0, 0, 0, 0.08);
 }
 
+
+/* Hover */
 .btn-primary:hover {
-  background-color: var(--primary-hover);
-  box-shadow: 0 14px 28px rgba(0, 106, 78, 0.45);
-  transform: translateY(-2px);
+  background: linear-gradient(
+    135deg,
+    #008F6A 0%,
+    #006A4E 100%
+  );
+
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 14px 30px rgba(0, 106, 78, 0.35),
+    0 6px 12px rgba(0, 0, 0, 0.10);
 }
 
+
+/* Click */
+.btn-primary:active {
+  transform: translateY(-1px);
+
+  box-shadow:
+    0 6px 12px rgba(0, 106, 78, 0.25);
+}
+
+
+/* Shine Effect */
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -120%;
+  width: 60%;
+  height: 100%;
+
+  background: rgba(255, 255, 255, 0.18);
+
+  transform: skewX(-25deg);
+  transition: left 0.6s ease;
+}
+
+
+.btn-primary:hover::before {
+  left: 130%;
+}
+
+
+/* Large Button */
 .btn-large {
   padding: 1.1rem 2.4rem;
   font-size: 1.1rem;
@@ -280,15 +350,39 @@ body {
 }
 
 .feature-tag {
-  background-color: var(--dark-accent);
-  color: #ffffff;
-  padding: 10px 18px;
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--primary-color);
+
+  padding: 11px 19px;
   border-radius: 20px;
+
   font-size: 0.9rem;
-  font-weight: 600;
+  font-weight: 700;
+
   display: flex;
   align-items: center;
   gap: 8px;
+
+  border: 1px solid rgba(0, 106, 78, 0.12);
+
+  box-shadow:
+    0 6px 15px rgba(0, 106, 78, 0.10),
+    0 2px 5px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.3s ease;
+}
+
+
+.feature-tag:hover {
+  transform: translateY(-4px);
+
+  background: #ffffff;
+
+  border-color: rgba(0, 106, 78, 0.25);
+
+  box-shadow:
+    0 12px 24px rgba(0, 106, 78, 0.18),
+    0 4px 8px rgba(0, 0, 0, 0.08);
 }
 
 .hero-right {
@@ -302,10 +396,26 @@ body {
   width: 100%;
   max-width: 520px;
   height: 560px;
+
   background-color: var(--primary-light);
+
   border-radius: 28px;
   overflow: hidden;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+
+  box-shadow:
+    0 20px 40px rgba(0, 0, 0, 0.08),
+    0 10px 30px rgba(0, 106, 78, 0.10);
+
+  transition: all 0.4s ease;
+}
+
+
+.image-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 28px 50px rgba(0, 0, 0, 0.12),
+    0 15px 35px rgba(0, 106, 78, 0.15);
 }
 
 .image-card img {
@@ -495,17 +605,36 @@ body {
 }
 
 .card-arrow {
-  width: 28px;
-  height: 28px;
+  width: 30px;
+  height: 30px;
+
   background-color: #ffffff;
   color: var(--primary-color);
+
   border-radius: 50%;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 0.7rem;
   flex-shrink: 0;
+
+  box-shadow:
+    0 5px 12px rgba(0, 0, 0, 0.15);
+
   transition: all 0.3s ease;
+}
+
+
+.help-card:hover .card-arrow {
+  background-color: var(--primary-color);
+  color: #ffffff;
+
+  transform: translateX(4px) scale(1.12);
+
+  box-shadow:
+    0 6px 16px rgba(0, 106, 78, 0.35);
 }
 
 .help-card:hover img {
