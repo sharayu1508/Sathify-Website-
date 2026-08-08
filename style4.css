@@ -14,6 +14,17 @@
   --bg-gradient: linear-gradient(135deg, #edf6f2 0%, #ffffff 50%, #e1efe9 100%);
   --card-bg: #ffffff;
   --font-family: 'Plus Jakarta Sans', sans-serif;
+
+}
+
+
+.hero {
+  background: linear-gradient(
+    180deg,
+    #d8eee7 0%,
+    #edf7f4 55%,
+    #ffffff 100%
+  );
 }
 
 * {
@@ -526,52 +537,237 @@ body {
 /* =========================================================
    POPULAR SERVICES SECTION
    ========================================================= */
+/* ================================
+   SERVICES GRID
+================================ */
 .services-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
 }
 
+
+/* ================================
+   PREMIUM SERVICE CARD
+================================ */
 .service-card {
-  background: var(--card-bg);
+  position: relative;
+  overflow: hidden;
+
+  background: linear-gradient(
+    145deg,
+    #ffffff 0%,
+    #f8fcfa 100%
+  );
+
   padding: 2.25rem;
   border-radius: 24px;
+
   border: 1px solid rgba(0, 106, 78, 0.08);
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.03);
-  transition: all 0.3s ease;
+
+  box-shadow:
+    0 8px 25px rgba(0, 40, 29, 0.05),
+    0 2px 6px rgba(0, 0, 0, 0.02);
+
+  transition:
+    transform 0.4s ease,
+    box-shadow 0.4s ease,
+    border-color 0.4s ease;
+
+  cursor: pointer;
 }
 
+
+/* Soft green glow */
+.service-card::before {
+  content: "";
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  top: -100px;
+  right: -80px;
+
+  background: rgba(0, 106, 78, 0.08);
+
+  border-radius: 50%;
+
+  transition: all 0.5s ease;
+
+  pointer-events: none;
+}
+
+
+/* Bottom accent line */
+.service-card::after {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  bottom: 0;
+
+  width: 0;
+  height: 4px;
+
+  background: linear-gradient(
+    90deg,
+    #006A4E,
+    #1a8f70
+  );
+
+  border-radius: 0 10px 0 0;
+
+  transition: width 0.4s ease;
+}
+
+
+/* ================================
+   HOVER EFFECT
+================================ */
 .service-card:hover {
-  transform: translateY(-6px);
-  border-color: var(--primary-color);
-  box-shadow: 0 18px 36px rgba(0, 106, 78, 0.12);
+  transform: translateY(-10px);
+
+  border-color: rgba(0, 106, 78, 0.25);
+
+  box-shadow:
+    0 20px 45px rgba(0, 106, 78, 0.13),
+    0 8px 18px rgba(0, 0, 0, 0.04);
 }
 
+
+.service-card:hover::before {
+  width: 260px;
+  height: 260px;
+
+  background: rgba(0, 106, 78, 0.12);
+}
+
+
+.service-card:hover::after {
+  width: 100%;
+}
+
+
+/* ================================
+   ICON
+================================ */
 .icon-wrapper {
+  position: relative;
+  z-index: 1;
+
   width: 60px;
   height: 60px;
-  background-color: var(--primary-light);
+
+  background: linear-gradient(
+    135deg,
+    #e4f3ee,
+    #d4ebe4
+  );
+
   color: var(--primary-color);
-  border-radius: 16px;
+
+  border-radius: 17px;
+
   display: flex;
   align-items: center;
   justify-content: center;
+
   font-size: 1.6rem;
+
   margin-bottom: 1.5rem;
+
+  box-shadow:
+    0 6px 15px rgba(0, 106, 78, 0.08);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    box-shadow 0.4s ease;
 }
 
+
+.service-card:hover .icon-wrapper {
+  transform: translateY(-4px) scale(1.08) rotate(-3deg);
+
+  background: linear-gradient(
+    135deg,
+    #006A4E,
+    #008b68
+  );
+
+  color: #ffffff;
+
+  box-shadow:
+    0 10px 22px rgba(0, 106, 78, 0.25);
+}
+
+
+/* ================================
+   TITLE
+================================ */
 .service-card h3 {
+  position: relative;
+  z-index: 1;
+
   font-size: 1.35rem;
   font-weight: 700;
+
   margin-bottom: 0.6rem;
+
+  color: var(--text-main);
+
+  transition: color 0.3s ease;
 }
 
+
+.service-card:hover h3 {
+  color: var(--primary-color);
+}
+
+
+/* ================================
+   DESCRIPTION
+================================ */
 .service-card p {
+  position: relative;
+  z-index: 1;
+
   color: var(--text-muted);
+
   font-size: 1rem;
   line-height: 1.6;
+
+  transition: color 0.3s ease;
 }
 
+
+.service-card:hover p {
+  color: #334155;
+}
+
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media (max-width: 1100px) {
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .service-card {
+    padding: 1.75rem;
+  }
+}
 /* =========================================================
    WHY US SECTION
    ========================================================= */
