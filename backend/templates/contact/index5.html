@@ -1,10 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sathify - Instant Home Services in Minutes</title>
-  <link rel="stylesheet" href="style5.css">
+ <link rel="stylesheet" href="{% static 'contact/style5.css' %}">
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,53 +19,114 @@
   <header class="navbar">
     <div class="nav-container">
       <a href="#" class="logo">Sathify</a>
-      
       <!-- Mobile Toggle Checkbox -->
-      <input type="checkbox" id="nav-toggle" class="nav-toggle">
-      
-      <!-- Mobile Hamburger Icon -->
-      <label for="nav-toggle" class="nav-toggle-label">
-        <i class="fa-solid fa-bars icon-open"></i>
-        <i class="fa-solid fa-xmark icon-close"></i>
-      </label>
+<input type="checkbox" id="nav-toggle" class="nav-toggle">
 
-      <nav class="nav-links">
-        <!-- Services Dropdown -->
-        <div class="dropdown">
-          <a href="#services" class="dropdown-btn">
-            Services <i class="fa-solid fa-chevron-down"></i>
-          </a>
-          <div class="dropdown-menu">
-            <a href="#services"><i class="fa-solid fa-broom"></i> Home Cleaning</a>
-            <a href="#services"><i class="fa-solid fa-sink"></i> Dishwashing</a>
-            <a href="#services"><i class="fa-solid fa-shirt"></i> Laundry Care</a>
-            <a href="#services"><i class="fa-solid fa-utensils"></i> Kitchen Helper</a>
-          </div>
+<!-- Mobile Hamburger Icon -->
+<label for="nav-toggle" class="nav-toggle-label">
+    <i class="fa-solid fa-bars icon-open"></i>
+    <i class="fa-solid fa-xmark icon-close"></i>
+</label>
+
+<nav class="nav-links">
+
+    <!-- SERVICES -->
+    <div class="dropdown">
+
+        <a href="{% url 'contact' %}#services" class="dropdown-btn">
+            Services
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <div class="dropdown-menu">
+
+            <a href="{% url 'contact' %}#services">
+                <i class="fa-solid fa-broom"></i>
+                Home Cleaning
+            </a>
+
+            <a href="{% url 'contact' %}#services">
+                <i class="fa-solid fa-sink"></i>
+                Dishwashing
+            </a>
+
+            <a href="{% url 'contact' %}#services">
+                <i class="fa-solid fa-shirt"></i>
+                Laundry Care
+            </a>
+
+            <a href="{% url 'contact' %}#services">
+                <i class="fa-solid fa-utensils"></i>
+                Kitchen Helper
+            </a>
+
         </div>
-
-        <!-- Cities Dropdown -->
-        <div class="dropdown">
-          <a href="#cities" class="dropdown-btn">
-            Places <i class="fa-solid fa-chevron-down"></i>
-          </a>
-          <div class="dropdown-menu">
-            <a href="#"><i class="fa-solid fa-location-dot"></i> Ravet</a>
-            <a href="#"><i class="fa-solid fa-location-dot"></i> Chinchwad</a>
-            <a href="#"><i class="fa-solid fa-location-dot"></i> Wakad</a>
-            <a href="#"><i class="fa-solid fa-location-dot"></i> Hinjewadi</a>
-            <a href="#"><i class="fa-solid fa-location-dot"></i> Akurdi</a>
-          </div>
-        </div>
-
-        <a href="about.html">About</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#faq">FAQ</a>
-      </nav>
     </div>
+
+
+    <!-- PLACES -->
+    <div class="dropdown">
+
+        <a href="{% url 'contact' %}#cities" class="dropdown-btn">
+            Places
+            <i class="fa-solid fa-chevron-down"></i>
+        </a>
+
+        <div class="dropdown-menu">
+
+            <a href="{% url 'contact' %}#cities">
+                <i class="fa-solid fa-location-dot"></i>
+                Ravet
+            </a>
+
+            <a href="{% url 'contact' %}#cities">
+                <i class="fa-solid fa-location-dot"></i>
+                Chinchwad
+            </a>
+
+            <a href="{% url 'contact' %}#cities">
+                <i class="fa-solid fa-location-dot"></i>
+                Wakad
+            </a>
+
+            <a href="{% url 'contact' %}#cities">
+                <i class="fa-solid fa-location-dot"></i>
+                Hinjewadi
+            </a>
+
+            <a href="{% url 'contact' %}#cities">
+                <i class="fa-solid fa-location-dot"></i>
+                Akurdi
+            </a>
+
+        </div>
+    </div>
+
+
+    <!-- ABOUT -->
+    <a href="{% url 'about' %}">
+        About
+    </a>
+
+
+    <!-- REVIEWS -->
+    <a href="{% url 'contact' %}#reviews">
+        Reviews
+    </a>
+
+
+    <!-- FAQ -->
+    <a href="{% url 'contact' %}#faq">
+        FAQ
+    </a>
+
+</nav>
+
+    </div>     
   </header>
 
   <!-- Hero Section -->
-  <section class="hero">
+<section class="hero" id="home">
     <div class="hero-container">
       <div class="hero-left">
         <div class="badge-trust">
@@ -97,17 +159,7 @@
             <i class="fa-solid fa-star"></i> 4.8 Rated
           </div>
           
-          <img src="maid1.png" alt="Sathify Expert" style="
-            width: 100% !important;
-            height: 500px !important;
-            max-width: 100% !important;
-            object-fit: contain !important;
-            object-position: center center !important;
-            display: block !important;
-            margin: 25px auto 0 auto !important;
-
-        ">
-          
+         <img src="{% static 'contact/images/maid1.png' %}">
           <div class="eta-card">
             <div class="eta-icon">
               <i class="fa-solid fa-bolt"></i>
@@ -143,7 +195,7 @@
       <!-- Service Cards Grid -->
       <div class="cards-wrapper">
         <div class="help-card">
-          <img src="dishwashing.jpg" alt="Dishwashing">
+         <img src="{% static 'contact/images/dishwashing.jpg' %}">
           <div class="card-overlay">
             <span class="card-title">Dishwashing</span>
             <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -151,7 +203,7 @@
         </div>
 
         <div class="help-card">
-          <img src="Kitchencleaning.webp" alt="Kitchen Cleaning">
+        <img src="{% static 'contact/images/fancleaning.jpg' %}">
           <div class="card-overlay">
             <span class="card-title">Kitchen<br>Cleaning</span>
             <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -159,7 +211,7 @@
         </div>
 
         <div class="help-card">
-          <img src="fancleaning.jpg" alt="Fan Cleaning">
+         <img src="{% static 'contact/images/fancleaning.jpg' %}">
           <div class="card-overlay">
             <span class="card-title">Fan Cleaning</span>
             <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -167,7 +219,7 @@
         </div>
 
         <div class="help-card">
-          <img src="window.jpg" alt="Window Cleaning">
+          <img src="{% static 'contact/images/window.jpg' %}">
           <div class="card-overlay">
             <span class="card-title">Window<br>Cleaning</span>
             <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -175,7 +227,7 @@
         </div>
 
         <div class="help-card">
-          <img src="laundry.webp" alt="Laundry Help">
+          <img src="{% static 'contact/images/laundry.webp' %}">
           <div class="card-overlay">
             <span class="card-title">Laundry Help</span>
             <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -183,7 +235,7 @@
         </div>
 
         <div class="help-card">
-          <img src="bathroom.jpg" alt="Bathroom Cleaning">
+          <img src="{% static 'contact/images/bathroom.jpg' %}">
           <div class="card-overlay">
             <span class="card-title">Bathroom<br>Cleaning</span>
             <div class="card-arrow"><i class="fa-solid fa-arrow-right"></i></div>
@@ -459,206 +511,125 @@
 
     </div>
 </section>
-<!-- Contact Us Section -->
-<!-- <section class="contact-section" id="contact">
-    <div class="contact-container">
+<!-- ================= CONTACT US SECTION ================= -->
+<section class="contact-section" id="contact">
 
-        <div class="contact-header">
-            <span class="contact-subtitle">CONTACT US</span>
-            <h2>We’re Here To Help You</h2>
-            <p>
-                Have questions about Sathify services? Our team is always ready 
-                to assist you with trusted home services.
-            </p>
+    <div class="contact-header">
+        <span class="contact-subtitle">CONTACT US</span>
+
+        <h2>We’re Here To Help You</h2>
+
+        <p>
+            Have questions about Sathify services? Our team is always ready
+            to assist you with trusted home services.
+        </p>
+    </div>
+
+
+    <div class="contact-content">
+
+        <!-- ================= CONTACT INFORMATION ================= -->
+        <div class="contact-info">
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-phone"></i>
+                </div>
+
+                <div>
+                    <h4>Call Us</h4>
+                    <p>+91 9800000001</p>
+                </div>
+            </div>
+
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-envelope"></i>
+                </div>
+
+                <div>
+                    <h4>Email</h4>
+                    <p>sathify123@gmail.com</p>
+                </div>
+            </div>
+
+
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fa-solid fa-location-dot"></i>
+                </div>
+
+                <div>
+                    <h4>Location</h4>
+                    <p>Pune, Maharashtra</p>
+                </div>
+            </div>
+
         </div>
 
-        <div class="contact-content"> -->
 
-            <!-- Contact Information -->
-            <!-- <div class="contact-info">
+        <!-- ================= CONTACT FORM ================= -->
+        <div class="contact-form">
 
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-phone"></i>
-                    </div>
-                    <div>
-                        <h4>Call Us</h4>
-                        <p>+91 9800000001</p>
-                    </div>
+            {% if success %}
+                <div class="success-message">
+                    {{ success }}
+                </div>
+            {% endif %}
+
+            <form method="POST" action="{% url 'contact' %}">
+                {% csrf_token %}
+
+                <div class="input-group">
+                    <input
+                        type="text"
+                        name="name"
+                        placeholder="Your Name"
+                        required>
                 </div>
 
 
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-envelope"></i>
-                    </div>
-                    <div>
-                        <h4>Email</h4>
-                        <p>sathify123@gmail.com</p>
-                    </div>
+                <div class="input-group">
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Your Email"
+                        required>
                 </div>
 
 
-                <div class="contact-card">
-                    <div class="contact-icon">
-                        <i class="fa-solid fa-location-dot"></i>
-                    </div>
-                    <div>
-                        <h4>Location</h4>
-                        <p>Pune, Maharashtra</p>
-                    </div>
+                <div class="input-group">
+                    <input
+                        type="tel"
+                        name="phone"
+                        placeholder="Phone Number"
+                        required>
                 </div>
 
-            </div> -->
+
+                <div class="input-group">
+                    <textarea
+                        name="message"
+                        rows="5"
+                        placeholder="Your Message"
+                        required></textarea>
+                </div>
 
 
-            <!-- Contact Form -->
-            <!-- <div class="contact-form">
+                <button type="submit">
+                    Send Message
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
 
-                <form>
-
-                    <div class="input-group">
-                        <input type="text" placeholder="Your Name" required>
-                    </div>
-
-                    <div class="input-group">
-                        <input type="email" placeholder="Your Email" required>
-                    </div>
-
-                    <div class="input-group">
-                        <input type="tel" placeholder="Phone Number" required>
-                    </div>
-
-                    <div class="input-group">
-                        <textarea rows="5" placeholder="Your Message"></textarea>
-                    </div>
-
-                    <button type="submit">
-                        Send Message
-                        <i class="fa-solid fa-arrow-right"></i>
-                    </button>
-
-                </form>
-
-            </div>
+            </form>
 
         </div>
 
     </div>
-</section> -->
 
-
-
-<div class="contact-header">
-    <span class="contact-subtitle">CONTACT US</span>
-
-    <h2>We’re Here To Help You</h2>
-
-    <p>
-        Have questions about Sathify services? Our team is always ready
-        to assist you with trusted home services.
-    </p>
-</div>
-
-
-<div class="contact-content">
-
-    <!-- Contact Information -->
-    <div class="contact-info">
-
-        <div class="contact-card">
-            <div class="contact-icon">
-                <i class="fa-solid fa-phone"></i>
-            </div>
-
-            <div>
-                <h4>Call Us</h4>
-                <p>+91 9800000001</p>
-            </div>
-        </div>
-
-
-        <div class="contact-card">
-            <div class="contact-icon">
-                <i class="fa-solid fa-envelope"></i>
-            </div>
-
-            <div>
-                <h4>Email</h4>
-                <p>sathify123@gmail.com</p>
-            </div>
-        </div>
-
-
-        <div class="contact-card">
-            <div class="contact-icon">
-                <i class="fa-solid fa-location-dot"></i>
-            </div>
-
-            <div>
-                <h4>Location</h4>
-                <p>Pune, Maharashtra</p>
-            </div>
-        </div>
-
-    </div>
-
-
-    <!-- Contact Form -->
-    <div class="contact-form">
-
-        <form method="POST" action="/contact/">
-
-            <div class="input-group">
-                <input
-                    type="text"
-                    name="name"
-                    placeholder="Your Name"
-                    required
-                >
-            </div>
-
-
-            <div class="input-group">
-                <input
-                    type="email"
-                    name="email"
-                    placeholder="Your Email"
-                    required
-                >
-            </div>
-
-
-            <div class="input-group">
-                <input
-                    type="tel"
-                    name="phone"
-                    placeholder="Phone Number"
-                    required
-                >
-            </div>
-
-
-            <div class="input-group">
-                <textarea
-                    name="message"
-                    rows="5"
-                    placeholder="Your Message"
-                    required
-                ></textarea>
-            </div>
-
-
-            <button type="submit">
-                Send Message
-                <i class="fa-solid fa-arrow-right"></i>
-            </button>
-
-        </form>
-
-    </div>
-
-</div>
+</section>
+<!-- ================= END CONTACT US SECTION ================= -->
   <!-- Footer Section -->
   <footer class="footer">
     <div class="footer-container">
