@@ -4621,3 +4621,563 @@ section {
     }
 
 }
+
+/* =========================================================
+   SATHIFY PREMIUM DYNAMIC EFFECTS - FINAL LAYER
+   ========================================================= */
+:root {
+    --shadow-soft: 0 10px 30px rgba(0, 62, 46, 0.08);
+    --shadow-card: 0 16px 40px rgba(0, 70, 52, 0.10), 0 4px 12px rgba(0,0,0,0.04);
+    --shadow-hover: 0 24px 55px rgba(0, 106, 78, 0.18), 0 8px 20px rgba(0,0,0,0.07);
+    --border-soft: rgba(0, 106, 78, 0.14);
+}
+
+/* Better page depth */
+body {
+    background-attachment: fixed;
+}
+
+/* Navigation glass + shadow */
+.navbar,
+.about-navbar {
+    box-shadow: 0 8px 28px rgba(0, 45, 34, 0.16);
+    border-bottom: 1px solid rgba(255,255,255,0.14);
+}
+
+.navbar .logo,
+.about-logo {
+    transition: transform .35s ease, text-shadow .35s ease;
+}
+
+.navbar .logo:hover,
+.about-logo:hover {
+    transform: translateY(-2px) scale(1.03);
+    text-shadow: 0 8px 22px rgba(0,0,0,.20);
+}
+
+/* Animated nav underline */
+.navbar a::after,
+.about-nav-links a::after {
+    height: 3px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(255,255,255,.25);
+}
+
+/* Dropdown animation */
+.dropdown-menu {
+    transform-origin: top center;
+    animation: dropdownIn .22s ease both;
+    border: 1px solid rgba(0,106,78,.16) !important;
+    box-shadow: 0 18px 45px rgba(0, 55, 42, .18) !important;
+}
+
+.dropdown-menu a {
+    transition: transform .2s ease, background .2s ease, padding-left .2s ease !important;
+}
+
+.dropdown-menu a:hover {
+    transform: translateX(4px);
+    padding-left: 1.4rem !important;
+}
+
+@keyframes dropdownIn {
+    from { opacity: 0; transform: translateY(-8px) scale(.97); }
+    to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* Premium buttons */
+.btn,
+.about-btn,
+.about-cta-button,
+.explore-btn,
+.cta-button,
+.contact-form button {
+    border: 1px solid rgba(255,255,255,.20);
+    box-shadow: 0 10px 24px rgba(0, 106, 78, .18), inset 0 1px 0 rgba(255,255,255,.18);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn::after,
+.about-btn::after,
+.about-cta-button::after,
+.explore-btn::after,
+.contact-form button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -120%;
+    width: 70%;
+    height: 100%;
+    background: linear-gradient(100deg, transparent, rgba(255,255,255,.28), transparent);
+    transform: skewX(-20deg);
+    transition: left .7s ease;
+}
+
+.btn:hover::after,
+.about-btn:hover::after,
+.about-cta-button:hover::after,
+.explore-btn:hover::after,
+.contact-form button:hover::after {
+    left: 140%;
+}
+
+.btn:hover,
+.about-btn:hover,
+.about-cta-button:hover,
+.explore-btn:hover,
+.contact-form button:hover {
+    box-shadow: var(--shadow-hover);
+}
+
+.btn:active,
+.about-btn:active,
+.about-cta-button:active,
+.explore-btn:active,
+.contact-form button:active {
+    transform: translateY(1px) scale(.98);
+}
+
+/* Hero entrance */
+.hero-left > * {
+    animation: fadeUp .75s ease both;
+}
+
+.hero-left .badge-trust { animation-delay: .08s; }
+.hero-left h1 { animation-delay: .16s; }
+.hero-left .description { animation-delay: .24s; }
+.hero-left .features-list { animation-delay: .32s; }
+.hero-left .btn { animation-delay: .40s; }
+
+.image-card {
+    box-shadow: 0 24px 60px rgba(0, 75, 55, .13), 0 5px 16px rgba(0,0,0,.06) !important;
+    border: 1px solid rgba(0,106,78,.12);
+    transition: transform .45s cubic-bezier(.2,.8,.2,1), box-shadow .45s ease, border-color .45s ease !important;
+}
+
+.image-card:hover {
+    transform: translateY(-10px) scale(1.012) !important;
+    border-color: rgba(0,106,78,.28);
+    box-shadow: 0 30px 75px rgba(0,106,78,.20), 0 10px 25px rgba(0,0,0,.08) !important;
+}
+
+.image-card img {
+    transition: transform .7s cubic-bezier(.2,.8,.2,1), filter .5s ease !important;
+}
+
+.image-card:hover img {
+    transform: scale(1.025);
+    filter: saturate(1.04) brightness(1.02);
+}
+
+.rating-badge,
+.eta-card {
+    border: 1px solid rgba(0,106,78,.12);
+    box-shadow: 0 14px 32px rgba(0, 55, 42, .16);
+    transition: transform .35s ease, box-shadow .35s ease;
+}
+
+.rating-badge:hover { transform: translateY(-4px) rotate(-1deg); }
+.eta-card:hover { transform: translateY(-5px); box-shadow: 0 18px 38px rgba(0,55,42,.20); }
+
+.eta-icon {
+    animation: softPulse 2.4s ease-in-out infinite;
+}
+
+@keyframes softPulse {
+    0%,100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(0,106,78,.18); }
+    50% { transform: scale(1.08); box-shadow: 0 0 0 9px rgba(0,106,78,0); }
+}
+
+/* Section headings */
+.section-title,
+.about-section-title h2,
+.section-heading h2 {
+    position: relative;
+}
+
+.section-title::after,
+.about-section-title h2::after {
+    content: "";
+    display: block;
+    width: 58px;
+    height: 4px;
+    margin: 14px auto 0;
+    border-radius: 10px;
+    background: linear-gradient(90deg, #006A4E, #25a67f);
+    box-shadow: 0 4px 12px rgba(0,106,78,.22);
+    transform: scaleX(.7);
+    transition: transform .35s ease;
+}
+
+.section-title:hover::after,
+.about-section-title h2:hover::after {
+    transform: scaleX(1);
+}
+
+/* Service / feature cards */
+.service-card,
+.feature-box,
+.review-card,
+.faq-item,
+.contact-card,
+.contact-form,
+.about-feature-card,
+.about-step,
+.about-hero-card,
+.about-mission-card,
+.about-main-card,
+.mission-card,
+.why-card,
+.help-card {
+    border: 1px solid var(--border-soft);
+    box-shadow: var(--shadow-card);
+    transition: transform .4s cubic-bezier(.2,.8,.2,1), box-shadow .4s ease, border-color .4s ease, background .4s ease;
+}
+
+.service-card:hover,
+.feature-box:hover,
+.review-card:hover,
+.faq-item:hover,
+.contact-card:hover,
+.about-feature-card:hover,
+.about-step:hover,
+.about-hero-card:hover,
+.about-mission-card:hover,
+.about-main-card:hover,
+.mission-card:hover,
+.why-card:hover,
+.help-card:hover {
+    transform: translateY(-9px);
+    box-shadow: var(--shadow-hover);
+    border-color: rgba(0,106,78,.28);
+}
+
+.feature-box,
+.contact-card {
+    border-radius: 22px;
+}
+
+.feature-icon,
+.about-feature-icon,
+.about-step-icon,
+.about-card-icon,
+.icon-wrapper,
+.contact-icon,
+.mission-icon,
+.why-icon {
+    box-shadow: 0 10px 24px rgba(0,106,78,.15);
+    transition: transform .35s ease, box-shadow .35s ease, background .35s ease;
+}
+
+.feature-box:hover .feature-icon,
+.about-feature-card:hover .about-feature-icon,
+.about-step:hover .about-step-icon,
+.about-hero-card:hover .about-card-icon,
+.service-card:hover .icon-wrapper,
+.contact-card:hover .contact-icon,
+.why-card:hover .why-icon {
+    transform: translateY(-4px) scale(1.08) rotate(-3deg);
+    box-shadow: 0 15px 30px rgba(0,106,78,.23);
+}
+
+/* Feature tags */
+.feature-tag {
+    border: 1px solid rgba(0,106,78,.16);
+    box-shadow: 0 8px 20px rgba(0,106,78,.10);
+}
+
+.feature-tag:hover {
+    transform: translateY(-6px) scale(1.02);
+}
+
+/* Large service image section */
+.house-help-container {
+    border: 1px solid rgba(255,255,255,.18);
+    box-shadow: 0 28px 60px rgba(0, 45, 34, .22);
+}
+
+.help-card {
+    box-shadow: 0 12px 28px rgba(0,0,0,.22);
+}
+
+.help-card:hover {
+    transform: translateY(-9px) scale(1.025);
+    box-shadow: 0 22px 42px rgba(0,0,0,.28), 0 8px 20px rgba(0,106,78,.18);
+}
+
+/* Reviews */
+.review-card {
+    position: relative;
+}
+
+.review-card::before {
+    content: "\201C";
+    position: absolute;
+    top: 12px;
+    right: 22px;
+    font-size: 4rem;
+    line-height: 1;
+    color: rgba(0,106,78,.08);
+    font-weight: 800;
+    pointer-events: none;
+}
+
+.card-stars i,
+.stars i {
+    filter: drop-shadow(0 3px 5px rgba(245,158,11,.20));
+    transition: transform .25s ease;
+}
+
+.review-card:hover .card-stars i {
+    transform: translateY(-2px) scale(1.08);
+}
+
+/* FAQ */
+.faq-item {
+    transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease;
+}
+
+.faq-item[open] {
+    border-color: rgba(0,106,78,.30);
+    box-shadow: 0 16px 35px rgba(0,106,78,.12);
+}
+
+.faq-item summary::after {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary-light);
+}
+
+/* Contact form */
+.input-group input,
+.input-group textarea {
+    border: 1px solid #d8e5df !important;
+    box-shadow: inset 0 2px 7px rgba(0,50,38,.03);
+}
+
+.input-group input:hover,
+.input-group textarea:hover {
+    border-color: rgba(0,106,78,.35) !important;
+}
+
+.input-group input:focus,
+.input-group textarea:focus {
+    border-color: #006A4E !important;
+    box-shadow: 0 0 0 4px rgba(0,106,78,.10), 0 8px 20px rgba(0,106,78,.08) !important;
+    transform: translateY(-1px);
+}
+
+.contact-form button {
+    box-shadow: 0 12px 28px rgba(0,106,78,.20);
+}
+
+/* Footer depth */
+.footer,
+.about-footer {
+    border-top: 1px solid rgba(255,255,255,.08);
+    box-shadow: 0 -12px 35px rgba(0,35,27,.10);
+}
+
+.footer-col a,
+.footer-links a {
+    position: relative;
+    transition: color .25s ease, transform .25s ease !important;
+}
+
+.footer-col a:hover,
+.footer-links a:hover {
+    transform: translateX(5px);
+}
+
+/* About page premium effects */
+.about-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-hero::before,
+.about-hero::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.about-hero::before {
+    width: 420px;
+    height: 420px;
+    right: -150px;
+    top: -170px;
+    background: rgba(0,106,78,.08);
+    animation: aboutFloat 8s ease-in-out infinite;
+}
+
+.about-hero::after {
+    width: 250px;
+    height: 250px;
+    left: -100px;
+    bottom: -130px;
+    background: rgba(22,132,95,.07);
+    animation: aboutFloat 10s ease-in-out infinite reverse;
+}
+
+.about-hero > * { position: relative; z-index: 1; }
+
+.about-tag,
+.about-small-tag {
+    border: 1px solid rgba(0,106,78,.14);
+    box-shadow: 0 7px 18px rgba(0,106,78,.09);
+    transition: transform .3s ease, box-shadow .3s ease;
+}
+
+.about-tag:hover,
+.about-small-tag:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(0,106,78,.14);
+}
+
+.about-hero-left h1,
+.about-hero-card,
+.about-section-title,
+.about-feature-card,
+.about-step,
+.about-mission-content,
+.about-mission-card,
+.about-cta {
+    animation: fadeUp .75s ease both;
+}
+
+.about-hero-left h1 { animation-delay: .12s; }
+.about-hero-card { animation-delay: .22s; }
+.about-feature-card:nth-child(2) { animation-delay: .08s; }
+.about-feature-card:nth-child(3) { animation-delay: .16s; }
+.about-feature-card:nth-child(4) { animation-delay: .24s; }
+.about-step:nth-child(2) { animation-delay: .08s; }
+.about-step:nth-child(3) { animation-delay: .16s; }
+.about-step:nth-child(4) { animation-delay: .24s; }
+
+.about-mission-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-mission-card::before {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    right: -70px;
+    top: -70px;
+    background: rgba(255,255,255,.08);
+    transition: transform .5s ease;
+}
+
+.about-mission-card:hover::before {
+    transform: scale(1.35);
+}
+
+.about-step-number {
+    transition: color .3s ease, transform .3s ease;
+}
+
+.about-step:hover .about-step-number {
+    color: #006A4E;
+    transform: scale(1.12);
+}
+
+.about-cta {
+    position: relative;
+    overflow: hidden;
+}
+
+.about-cta::before {
+    content: "";
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+    right: -200px;
+    top: -260px;
+    background: rgba(255,255,255,.06);
+    animation: aboutFloat 9s ease-in-out infinite;
+}
+
+.about-cta > * { position: relative; z-index: 1; }
+
+.about-cta-button {
+    border: 1px solid rgba(255,255,255,.35);
+    box-shadow: 0 14px 30px rgba(0,0,0,.20);
+}
+
+.about-cta-button:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 20px 38px rgba(0,0,0,.26);
+}
+
+@keyframes aboutFloat {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(24px); }
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(22px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Respect reduced-motion accessibility */
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+/* Strong responsive polish */
+@media (max-width: 900px) {
+    .about-hero-card,
+    .about-main-card,
+    .about-mission-card,
+    .contact-form {
+        box-shadow: 0 15px 35px rgba(0,70,52,.12);
+    }
+}
+
+@media (max-width: 600px) {
+    .btn,
+    .about-cta-button,
+    .explore-btn,
+    .about-btn,
+    .contact-form button {
+        min-height: 48px;
+    }
+
+    .about-feature-card,
+    .about-step,
+    .service-card,
+    .review-card,
+    .contact-card {
+        box-shadow: 0 10px 26px rgba(0,70,52,.09);
+    }
+}
+
+
+/* Scroll reveal used by index5.html */
+.scroll-reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity .7s ease, transform .7s cubic-bezier(.2,.8,.2,1);
+}
+
+.scroll-reveal.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+}
